@@ -1,0 +1,7 @@
+
+body {
+    background-color: rgb(68, 52, 33);
+}
+h1 {
+     animation: color-change 3s infinite;
+}
