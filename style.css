@@ -2,6 +2,15 @@
 body {
     background-color: rgb(156, 93, 16);
 }
-h1 {
-     animation: color-change 3s infinite;
+@keyframes myAnimation {
+  from {background-color: rgb(102, 46, 0);}
+  to {background-color: rgb(255, 98, 0);}
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(94, 44, 0);
+  animation-name: myAnimation;
+  animation-duration: 4s;
 }
