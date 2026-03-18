@@ -25,3 +25,9 @@ body {
         background-color: green;
     }
 }
+.test:hover {
+  background-color: #059862;
+}
+.test1:hover {
+  background-color: #059862;
+}
