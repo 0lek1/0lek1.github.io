@@ -6,6 +6,7 @@ body {
     background-color: red;
     animation-name: myAnimation;
     animation-duration: 40s;
+    animation-iteration-count: infinite;
 }
 @keyframes myAnimation {
     0% {
@@ -21,4 +22,4 @@ body {
         background-color: green;
     }
 }
-}
+
