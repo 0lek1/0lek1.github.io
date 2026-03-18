@@ -1,25 +1,27 @@
-
 body {
-    background-color: lightblue;
-    width: 100px;
-    height: 100px;
+    background-color: rgb(172, 124, 20);
+    width: 1000px;
+    height: 1000px;
     background-color: red;
     animation-name: myAnimation;
     animation-duration: 40s;
     animation-iteration-count: infinite;
 }
+
 @keyframes myAnimation {
     0% {
         background-color: red;
     }
+
     25% {
         background-color: yellow;
     }
+
     50% {
         background-color: blue;
     }
+
     100% {
         background-color: green;
     }
 }
-
