@@ -1,58 +1,50 @@
-/* ====== PODSTAWA ====== */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
-    animation: backgroundShift 20s infinite alternate;
+    background: linear-gradient(-45deg, #ff4b1f, #1e90ff, #7b2ff7, #00c9a7);
+    background-size: 400% 400%;
+    animation: bg 12s ease infinite;
 }
 
-/* ====== ANIMOWANE TŁO ====== */
-@keyframes backgroundShift {
-    0% { background-color: #ff4b1f; }
-    25% { background-color: #f9d423; }
-    50% { background-color: #1e90ff; }
-    75% { background-color: #7b2ff7; }
-    100% { background-color: #00c9a7; }
+@keyframes bg {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
-/* ====== HEADER ====== */
-.hero {
+.card {
+    width: 90%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
     text-align: center;
-    margin-top: 40px;
 }
 
-.title {
-    font-size: 60px;
+h1 {
     color: white;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
-    animation: popIn 1s ease-out;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
-.subtitle {
-    color: white;
-    font-size: 20px;
-}
-
-/* ====== ANIMACJA WEJŚCIA ====== */
-@keyframes popIn {
-    from {
-        transform: scale(0.7);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* ====== PRZYCISKI ====== */
-.nav {
-    margin: 20px;
+.buttons {
+    margin-bottom: 20px;
 }
 
 .btn {
@@ -60,51 +52,20 @@ body {
     padding: 12px 20px;
     margin: 10px;
 
-    background: white;
-    color: black;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
 
-    border-radius: 12px;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.btn:hover {
-    transform: translateY(-5px) scale(1.05);
-    background: #222;
     color: white;
-}
+    background: rgba(0,0,0,0.4);
 
-.btn-primary {
-    background: #059862;
-    color: white;
-}
-
-/* ====== GALERIA ====== */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    width: 90%;
-    max-width: 1000px;
-    margin: 30px auto;
-}
-
-.gallery img {
-    width: 100%;
-    border-radius: 15px;
     transition: 0.3s;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.gallery img:hover {
-    transform: scale(1.08);
-}
-
-/* ====== FOOTER ====== */
-footer {
-    margin-top: 40px;
-    color: white;
-    font-weight: bold;
+.btn:hover {
+    transform: scale(1.1);
+    background: white;
+    color: black;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }

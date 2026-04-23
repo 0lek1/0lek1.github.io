@@ -4,33 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Axel</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(-45deg, #ff4b1f, #1e90ff, #7b2ff7, #00c9a7);
+            background-size: 400% 400%;
+            animation: bg 12s ease infinite;
+        }
+
+        @keyframes bg {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        .card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 1000px;
+            width: 90%;
+        }
+
+        h1 {
+            color: white;
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        .buttons {
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            background: rgba(0,0,0,0.4);
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: white;
+            color: black;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.08) rotate(1deg);
+        }
+
+        footer {
+            margin-top: 20px;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
 
-<header class="hero">
-    <h1 class="title">Axel</h1>
-    <p class="subtitle">Moja galeria kotów 🐱</p>
-</header>
+<div class="card">
 
-<nav class="nav">
-    <a href="stronka2.html" class="btn">Większe obrazki</a>
-    <a href="https://0lek.itch.io/parkourgame" class="btn btn-primary">Moja Gra!!</a>
-</nav>
+    <h1>Axel 🐱</h1>
 
-<main>
-    <section class="gallery">
-        <img src="kot.png" alt="kot axel">
-        <img src="kot2.png" alt="kot axel">
-        <img src="kot3.png" alt="kot axel">
-        <img src="kot4.png" alt="kot axel">
-        <img src="koty.png" alt="kot axel i kolejny">
-    </section>
-</main>
+    <div class="buttons">
+        <a href="stronka2.html" class="btn">Większe obrazki</a>
+        <a href="https://0lek.itch.io/parkourgame" class="btn">Moja gra</a>
+    </div>
 
-<footer>
-    <p>Axel • Strona stworzona z ❤️</p>
-</footer>
+    <div class="gallery">
+        <img src="kot.png">
+        <img src="kot2.png">
+        <img src="kot3.png">
+        <img src="kot4.png">
+        <img src="koty.png">
+    </div>
+
+    <footer>
+        Axel • najlepsze koty 😎
+    </footer>
+
+</div>
 
 </body>
 </html>
